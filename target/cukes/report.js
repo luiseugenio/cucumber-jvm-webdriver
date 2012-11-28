@@ -41,12 +41,12 @@ formatter.step({
   "line": 9
 });
 formatter.step({
-  "name": "eu clicar sobre o produto desejado",
+  "name": "eu clicar sobre o produto \"GAME CALL OF DUTY BLACK OPS 2 PRO EDITION XBOX\"",
   "keyword": "Quando ",
   "line": 10
 });
 formatter.step({
-  "name": "devo ver somente o jogo selecionado com o valor de 499.00",
+  "name": "devo ver somente o jogo selecionado com o valor de 499",
   "keyword": "Entao ",
   "line": 11
 });
@@ -54,7 +54,7 @@ formatter.match({
   "location": "PesquisarStepdefs.que_sou_um_cliente_navengando_no_site()"
 });
 formatter.result({
-  "duration": 15692408796,
+  "duration": 5326654950,
   "status": "passed"
 });
 formatter.match({
@@ -67,46 +67,48 @@ formatter.match({
   "location": "PesquisarStepdefs.eu_escrever_na_caixa_de_texto(String)"
 });
 formatter.result({
-  "duration": 110217808,
+  "duration": 95472308,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.clicar_no_botao_de_pesquisar()"
 });
 formatter.result({
-  "duration": 5205102574,
+  "duration": 3418739493,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.devo_ver_a_listagem_de_produtos_que_atendam_os_requisitos()"
 });
 formatter.result({
-  "duration": 13500536,
+  "duration": 15388779,
   "status": "passed"
 });
 formatter.match({
-  "location": "PesquisarStepdefs.eu_clicar_sobre_o_produto_desejado()"
+  "arguments": [
+    {
+      "val": "GAME CALL OF DUTY BLACK OPS 2 PRO EDITION XBOX",
+      "offset": 27
+    }
+  ],
+  "location": "PesquisarStepdefs.eu_clicar_sobre_o_produto(String)"
 });
 formatter.result({
-  "duration": 404641,
-  "status": "pending",
-  "error_message": "cucumber.runtime.PendingException: TODO: implement me\n\tat br.treinamento.cecomil.PesquisarStepdefs.eu_clicar_sobre_o_produto_desejado(PesquisarStepdefs.java:63)\n\tat ✽.Quando eu clicar sobre o produto desejado(br/treinamento/cecomil/pesquisar.feature:10)\n"
+  "duration": 2346742220,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "499",
       "offset": 51
-    },
-    {
-      "val": "00",
-      "offset": 55
     }
   ],
-  "location": "PesquisarStepdefs.devo_ver_somente_o_jogo_selecionado_com_o_valor_de_(int,int)"
+  "location": "PesquisarStepdefs.devo_ver_somente_o_jogo_selecionado_com_o_valor_de_(int)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 516083345,
+  "status": "passed"
 });
 formatter.scenario({
   "id": "como-um-cliente-gostaria-de-pesquisar-os-produtos-do-site-para-efetuar-uma-compra;encontrou-o-produto-pesquisado-com-venda-no-site-e-na-loja",
@@ -137,12 +139,12 @@ formatter.step({
   "line": 17
 });
 formatter.step({
-  "name": "eu clicar sobre o produto desejado",
+  "name": "eu clicar sobre o produto \"GAME FIFA 2013 XBOX\"",
   "keyword": "Quando ",
   "line": 18
 });
 formatter.step({
-  "name": "devo ver somente o jogo selecionado com o valor de 179.00",
+  "name": "devo ver somente o jogo selecionado com o valor de 179",
   "keyword": "Entao ",
   "line": 19
 });
@@ -165,7 +167,7 @@ formatter.match({
   "location": "PesquisarStepdefs.que_sou_um_cliente_navengando_no_site()"
 });
 formatter.result({
-  "duration": 4626193199,
+  "duration": 5173219733,
   "status": "passed"
 });
 formatter.match({
@@ -178,58 +180,62 @@ formatter.match({
   "location": "PesquisarStepdefs.eu_escrever_na_caixa_de_texto(String)"
 });
 formatter.result({
-  "duration": 124286255,
+  "duration": 80905626,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.clicar_no_botao_de_pesquisar()"
 });
 formatter.result({
-  "duration": 3192612661,
+  "duration": 3367985592,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.devo_ver_a_listagem_de_produtos_que_atendam_os_requisitos()"
 });
 formatter.result({
-  "duration": 17403444,
+  "duration": 17127020,
   "status": "passed"
 });
 formatter.match({
-  "location": "PesquisarStepdefs.eu_clicar_sobre_o_produto_desejado()"
+  "arguments": [
+    {
+      "val": "GAME FIFA 2013 XBOX",
+      "offset": 27
+    }
+  ],
+  "location": "PesquisarStepdefs.eu_clicar_sobre_o_produto(String)"
 });
 formatter.result({
-  "duration": 118476,
-  "status": "pending",
-  "error_message": "cucumber.runtime.PendingException: TODO: implement me\n\tat br.treinamento.cecomil.PesquisarStepdefs.eu_clicar_sobre_o_produto_desejado(PesquisarStepdefs.java:63)\n\tat ✽.Quando eu clicar sobre o produto desejado(br/treinamento/cecomil/pesquisar.feature:18)\n"
+  "duration": 2230265519,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "179",
       "offset": 51
-    },
-    {
-      "val": "00",
-      "offset": 55
     }
   ],
-  "location": "PesquisarStepdefs.devo_ver_somente_o_jogo_selecionado_com_o_valor_de_(int,int)"
+  "location": "PesquisarStepdefs.devo_ver_somente_o_jogo_selecionado_com_o_valor_de_(int)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 541258534,
+  "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.o_botao_comprar_deve_estar_presente()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 4856755,
+  "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.clicar_no_botao_de_comprar()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 2968396388,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -241,7 +247,8 @@ formatter.match({
   "location": "PesquisarStepdefs.deve_redirecionar_para_o(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 6723925,
+  "status": "passed"
 });
 formatter.scenario({
   "id": "como-um-cliente-gostaria-de-pesquisar-os-produtos-do-site-para-efetuar-uma-compra;nao-encontrou-o-produto-pesquisado",
@@ -275,7 +282,7 @@ formatter.match({
   "location": "PesquisarStepdefs.que_sou_um_cliente_navengando_no_site()"
 });
 formatter.result({
-  "duration": 4744625031,
+  "duration": 8270454863,
   "status": "passed"
 });
 formatter.match({
@@ -288,14 +295,14 @@ formatter.match({
   "location": "PesquisarStepdefs.eu_escrever_na_caixa_de_texto(String)"
 });
 formatter.result({
-  "duration": 77368078,
+  "duration": 183298214,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.clicar_no_botao_de_pesquisar()"
 });
 formatter.result({
-  "duration": 2911565652,
+  "duration": 3175692143,
   "status": "passed"
 });
 formatter.match({
@@ -308,7 +315,7 @@ formatter.match({
   "location": "PesquisarStepdefs.devo_ver_a_mensagem(String)"
 });
 formatter.result({
-  "duration": 602172030,
+  "duration": 506491510,
   "status": "passed"
 });
 });

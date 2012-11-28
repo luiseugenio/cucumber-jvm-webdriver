@@ -4,6 +4,7 @@
  */
 package br.treinamento.cecomil;
 
+import br.treinamento.page.HomePage;
 import static org.junit.Assert.*;
 
 import cucumber.api.java.After;
@@ -11,9 +12,9 @@ import cucumber.api.java.Before;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
-import cucumber.runtime.PendingException;
-import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -23,12 +24,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  */
 public class PesquisarStepdefs {
 
-    private WebDriver driver;
+    private WebDriver driver = new FirefoxDriver();
     private String baseUrl = "http://cecomil.com.br/";
 
     @Before
     public void setUp() {
-        driver = new FirefoxDriver();
+        if (driver == null) {
+            driver = new FirefoxDriver();
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        }
     }
 
     @After
@@ -57,13 +61,12 @@ public class PesquisarStepdefs {
         assertTrue(isElementPresent(By.cssSelector("div.colunas")));
     }
 
-    @Quando("^eu clicar sobre o produto desejado$")
-    public void eu_clicar_sobre_o_produto_desejado() throws Throwable {
-        // Express the Regexp above with the code you wish you had
-        throw new PendingException();
+    @Quando("^eu clicar sobre o produto \"([^\"]*)\"$")
+    public void eu_clicar_sobre_o_produto(String arg1) throws Throwable {
+        driver.findElement(By.xpath("//img[@alt='" + arg1 + "']")).click();
     }
 
-    @Entao("^devo ver somente o jogo selecionado com o valor de '(\\d+).(\\d+)'$")
+    @Entao("^devo ver somente o jogo selecionado com o valor de (\\d+)$")
     public void devo_ver_somente_o_jogo_selecionado_com_o_valor_de_(int arg1) throws Throwable {
         String pagina = driver.findElement(By.tagName("body")).getText();
         assertTrue(pagina.contains(String.valueOf(arg1)));
