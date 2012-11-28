@@ -26,79 +26,62 @@ public class PesquisarStepdefs {
 
     private WebDriver driver = new FirefoxDriver();
     private String baseUrl = "http://cecomil.com.br/";
+    private HomePage page;
 
     @Before
     public void setUp() {
-        if (driver == null) {
-            driver = new FirefoxDriver();
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        if (page == null) {
+            page = new HomePage(driver);
         }
     }
 
     @After
     public void tearDown() {
-        driver.quit();
+        page.fecharBrowser();
     }
 
     @Dado("^que sou um cliente navengando no site$")
     public void que_sou_um_cliente_navengando_no_site() throws Throwable {
-        driver.get(baseUrl);
+        page.acessarSite(baseUrl);
     }
 
     @Quando("^eu escrever na caixa de texto \"([^\"]*)\"$")
     public void eu_escrever_na_caixa_de_texto(String arg1) throws Throwable {
-        driver.findElement(By.name("produto")).clear();
-        driver.findElement(By.name("produto")).sendKeys(arg1);
+        page.escreverNaCaixaDeTextoOValor("produto", arg1);
     }
 
     @Quando("^clicar no botao de pesquisar$")
     public void clicar_no_botao_de_pesquisar() throws Throwable {
-        driver.findElement(By.cssSelector("input[type=\"image\"]")).click();
+        page.clicarNoBotaoPesquisaSemIdCecomil();
     }
 
     @Entao("^devo ver a listagem de produtos que atendam os requisitos$")
     public void devo_ver_a_listagem_de_produtos_que_atendam_os_requisitos() throws Throwable {
-        assertTrue(isElementPresent(By.cssSelector("div.colunas")));
+        assertTrue(page.existeComponentePorCss("div.colunas"));
     }
 
     @Quando("^eu clicar sobre o produto \"([^\"]*)\"$")
     public void eu_clicar_sobre_o_produto(String arg1) throws Throwable {
-        driver.findElement(By.xpath("//img[@alt='" + arg1 + "']")).click();
-    }
-
-    @Entao("^devo ver somente o jogo selecionado com o valor de (\\d+)$")
-    public void devo_ver_somente_o_jogo_selecionado_com_o_valor_de_(int arg1) throws Throwable {
-        String pagina = driver.findElement(By.tagName("body")).getText();
-        assertTrue(pagina.contains(String.valueOf(arg1)));
+        page.clicarNaImageDoBotao(arg1);
     }
 
     @Entao("^o botao comprar deve estar presente$")
     public void o_botao_comprar_deve_estar_presente() throws Throwable {
-        assertTrue(isElementPresent(By.id("bt_comprar")));
+        assertTrue(page.existeComponentePorId("bt_comprar"));
     }
 
     @Quando("^clicar no botao de comprar$")
     public void clicar_no_botao_de_comprar() throws Throwable {
-        driver.findElement(By.id("bt_comprar")).click();
+        page.clicarNoBotao("bt_comprar");
     }
 
     @Entao("^deve redirecionar para o \"([^\"]*)\"$")
     public void deve_redirecionar_para_o(String arg1) throws Throwable {
-        assertEquals(arg1, driver.getCurrentUrl());
+        assertEquals(arg1, page.urlCorrente());
     }
 
     @Entao("^devo ver a mensagem \"([^\"]*)\"$")
     public void devo_ver_a_mensagem(String arg1) throws Throwable {
-        String pagina = driver.findElement(By.tagName("body")).getText();
-        assertTrue(pagina.contains(arg1));
-    }
-
-    private boolean isElementPresent(By by) {
-        try {
-            driver.findElement(by);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        assertTrue(page.corpoDaPagina().contains(arg1));
     }
 }

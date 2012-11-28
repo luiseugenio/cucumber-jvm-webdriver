@@ -46,7 +46,7 @@ formatter.step({
   "line": 10
 });
 formatter.step({
-  "name": "devo ver somente o jogo selecionado com o valor de 499",
+  "name": "devo ver a mensagem \"R$ 499,00\"",
   "keyword": "Entao ",
   "line": 11
 });
@@ -54,7 +54,7 @@ formatter.match({
   "location": "PesquisarStepdefs.que_sou_um_cliente_navengando_no_site()"
 });
 formatter.result({
-  "duration": 5326654950,
+  "duration": 4991701689,
   "status": "passed"
 });
 formatter.match({
@@ -67,21 +67,21 @@ formatter.match({
   "location": "PesquisarStepdefs.eu_escrever_na_caixa_de_texto(String)"
 });
 formatter.result({
-  "duration": 95472308,
+  "duration": 192022285,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.clicar_no_botao_de_pesquisar()"
 });
 formatter.result({
-  "duration": 3418739493,
+  "duration": 3235406249,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.devo_ver_a_listagem_de_produtos_que_atendam_os_requisitos()"
 });
 formatter.result({
-  "duration": 15388779,
+  "duration": 117806135,
   "status": "passed"
 });
 formatter.match({
@@ -94,20 +94,20 @@ formatter.match({
   "location": "PesquisarStepdefs.eu_clicar_sobre_o_produto(String)"
 });
 formatter.result({
-  "duration": 2346742220,
+  "duration": 3163517117,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "499",
-      "offset": 51
+      "val": "R$ 499,00",
+      "offset": 21
     }
   ],
-  "location": "PesquisarStepdefs.devo_ver_somente_o_jogo_selecionado_com_o_valor_de_(int)"
+  "location": "PesquisarStepdefs.devo_ver_a_mensagem(String)"
 });
 formatter.result({
-  "duration": 516083345,
+  "duration": 625236174,
   "status": "passed"
 });
 formatter.scenario({
@@ -144,7 +144,7 @@ formatter.step({
   "line": 18
 });
 formatter.step({
-  "name": "devo ver somente o jogo selecionado com o valor de 179",
+  "name": "devo ver a mensagem \"R$ 179,00\"",
   "keyword": "Entao ",
   "line": 19
 });
@@ -167,7 +167,7 @@ formatter.match({
   "location": "PesquisarStepdefs.que_sou_um_cliente_navengando_no_site()"
 });
 formatter.result({
-  "duration": 5173219733,
+  "duration": 5035464612,
   "status": "passed"
 });
 formatter.match({
@@ -180,21 +180,21 @@ formatter.match({
   "location": "PesquisarStepdefs.eu_escrever_na_caixa_de_texto(String)"
 });
 formatter.result({
-  "duration": 80905626,
+  "duration": 85604655,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.clicar_no_botao_de_pesquisar()"
 });
 formatter.result({
-  "duration": 3367985592,
+  "duration": 3446642411,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.devo_ver_a_listagem_de_produtos_que_atendam_os_requisitos()"
 });
 formatter.result({
-  "duration": 17127020,
+  "duration": 14173239,
   "status": "passed"
 });
 formatter.match({
@@ -207,34 +207,34 @@ formatter.match({
   "location": "PesquisarStepdefs.eu_clicar_sobre_o_produto(String)"
 });
 formatter.result({
-  "duration": 2230265519,
+  "duration": 2366956287,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "179",
-      "offset": 51
+      "val": "R$ 179,00",
+      "offset": 21
     }
   ],
-  "location": "PesquisarStepdefs.devo_ver_somente_o_jogo_selecionado_com_o_valor_de_(int)"
+  "location": "PesquisarStepdefs.devo_ver_a_mensagem(String)"
 });
 formatter.result({
-  "duration": 541258534,
+  "duration": 519922952,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.o_botao_comprar_deve_estar_presente()"
 });
 formatter.result({
-  "duration": 4856755,
+  "duration": 6175175,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.clicar_no_botao_de_comprar()"
 });
 formatter.result({
-  "duration": 2968396388,
+  "duration": 3228039076,
   "status": "passed"
 });
 formatter.match({
@@ -247,7 +247,7 @@ formatter.match({
   "location": "PesquisarStepdefs.deve_redirecionar_para_o(String)"
 });
 formatter.result({
-  "duration": 6723925,
+  "duration": 11360267,
   "status": "passed"
 });
 formatter.scenario({
@@ -282,7 +282,7 @@ formatter.match({
   "location": "PesquisarStepdefs.que_sou_um_cliente_navengando_no_site()"
 });
 formatter.result({
-  "duration": 8270454863,
+  "duration": 5384222478,
   "status": "passed"
 });
 formatter.match({
@@ -295,14 +295,14 @@ formatter.match({
   "location": "PesquisarStepdefs.eu_escrever_na_caixa_de_texto(String)"
 });
 formatter.result({
-  "duration": 183298214,
+  "duration": 131018138,
   "status": "passed"
 });
 formatter.match({
   "location": "PesquisarStepdefs.clicar_no_botao_de_pesquisar()"
 });
 formatter.result({
-  "duration": 3175692143,
+  "duration": 2779304329,
   "status": "passed"
 });
 formatter.match({
@@ -315,7 +315,7 @@ formatter.match({
   "location": "PesquisarStepdefs.devo_ver_a_mensagem(String)"
 });
 formatter.result({
-  "duration": 506491510,
+  "duration": 502917537,
   "status": "passed"
 });
 });

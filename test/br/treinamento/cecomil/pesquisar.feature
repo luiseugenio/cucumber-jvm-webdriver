@@ -8,7 +8,7 @@ Cenario: Encontrou o produto pesquisado com venda apenas na loja
     E clicar no botao de pesquisar
     Entao devo ver a listagem de produtos que atendam os requisitos
     Quando eu clicar sobre o produto "GAME CALL OF DUTY BLACK OPS 2 PRO EDITION XBOX"
-    Entao devo ver somente o jogo selecionado com o valor de 499
+    Entao devo ver a mensagem "R$ 499,00"
 
 Cenario: Encontrou o produto pesquisado com venda no site e na loja
     Dado que sou um cliente navengando no site
@@ -16,7 +16,7 @@ Cenario: Encontrou o produto pesquisado com venda no site e na loja
     E clicar no botao de pesquisar
     Entao devo ver a listagem de produtos que atendam os requisitos
     Quando eu clicar sobre o produto "GAME FIFA 2013 XBOX"
-    Entao devo ver somente o jogo selecionado com o valor de 179
+    Entao devo ver a mensagem "R$ 179,00"
     E o botao comprar deve estar presente
     Quando clicar no botao de comprar
     Entao deve redirecionar para o "http://cecomil.com.br/carrinho.asp"
