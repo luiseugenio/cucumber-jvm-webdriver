@@ -12,9 +12,6 @@ import cucumber.api.java.Before;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -47,7 +44,7 @@ public class PesquisarStepdefs {
 
     @Quando("^eu escrever na caixa de texto \"([^\"]*)\"$")
     public void eu_escrever_na_caixa_de_texto(String arg1) throws Throwable {
-        page.escreverNaCaixaDeTextoOValor("produto", arg1);
+        page.escreverProduto(arg1);
     }
 
     @Quando("^clicar no botao de pesquisar$")
@@ -57,7 +54,7 @@ public class PesquisarStepdefs {
 
     @Entao("^devo ver a listagem de produtos que atendam os requisitos$")
     public void devo_ver_a_listagem_de_produtos_que_atendam_os_requisitos() throws Throwable {
-        assertTrue(page.existeComponentePorCss("div.colunas"));
+        assertTrue(page.existeDivColunas());
     }
 
     @Quando("^eu clicar sobre o produto \"([^\"]*)\"$")
@@ -67,12 +64,12 @@ public class PesquisarStepdefs {
 
     @Entao("^o botao comprar deve estar presente$")
     public void o_botao_comprar_deve_estar_presente() throws Throwable {
-        assertTrue(page.existeComponentePorId("bt_comprar"));
+        assertTrue(page.existeBotaoComprar());
     }
 
     @Quando("^clicar no botao de comprar$")
     public void clicar_no_botao_de_comprar() throws Throwable {
-        page.clicarNoBotao("bt_comprar");
+        page.clicarNoBotaoComprar();
     }
 
     @Entao("^deve redirecionar para o \"([^\"]*)\"$")
